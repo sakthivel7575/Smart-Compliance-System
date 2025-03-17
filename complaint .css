@@ -1,0 +1,173 @@
+body{
+    background-color: #0c0c0c;
+}
+.navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100; /* Increase the z-index to bring the navbar to the front */
+	height: 60px;
+	width: 100%;
+	background-color: #141313;
+	color: #fff;
+	border-radius: 3px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-shadow: 5px 5px 20px rgb(111, 109, 109) ;
+}
+.navbar-nav {
+	display: flex;
+	flex-direction: row;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.nav-item {
+	margin: 0;
+}
+
+.nav-title {
+	padding-left: 40px;
+}
+
+.nav-link {
+	display: block;
+	padding: 15px;
+	color: white;
+	text-decoration: none;
+	font-weight: 600;
+	transition: background-color 0.3s ease;
+	padding-top: 20px;
+}
+
+.nav-link:hover {
+	color: #c86a6a;
+}
+.user-details-box {
+    position: fixed;
+    top: 60px; /* Adjust the top value as needed */
+    right: 10px; /* Adjust the right value as needed */
+    background: #0c0c0c;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    display: none;
+    z-index: 1000;
+    color: white;
+}
+
+#profile-link {
+    position: relative;
+}
+
+#profile-icon {
+    cursor: pointer;
+}
+.comp{
+	
+	padding: 20px;
+	padding-top: 90px;
+	padding-left: 150px;
+    display: flex;
+}
+.box{
+	padding: 20px;
+}
+.complaint{
+	height: 600px;
+	width: 500px;
+    border-radius: 20px;
+	background: rgb(153, 122, 122);
+}
+.head{
+	text-align: center;
+	padding-top: 10px;
+}
+span{
+	color: red;
+}
+.head h2{
+	color: white;
+	text-decoration: underline;
+	font-size: 40px;
+}
+.form{
+	text-align: center;
+	font-size: 30px;
+	color: white;
+}
+.form-control{
+	height: 50px;
+	width: 300px;
+	padding: 5px;
+	text-align: center;
+	border-radius: 30px;
+	font-size: 15px;
+}
+.form-group{
+	padding: 5px;
+}
+.form-group #col{
+	height: 100px;
+	padding-left: 5px;
+
+}
+.form-group #btn{
+	width: 100px;
+	background-color: red;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+
+.chat-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 10px;
+	cursor: auto;
+}
+
+.chat-log {
+    border: 1px solid #ccc;
+    padding: 10px;
+    height: 270px;
+    overflow-y: scroll;
+}
+
+input {
+    width: 95%;
+    padding: 10px;
+}
+.head img{
+    height: 30px;
+	filter: grayscale(100%);
+
+}
+.admin{
+	text-align: right;
+	padding: 20px;
+}
+.admin button{
+	height: 40px;
+	background-color: red;
+	color: white;
+}
+#bot{
+	height: 525px;
+}
+.user-message{
+	color: red;
+	background-color: orange;
+	padding: 5px;
+	margin-bottom: 5px;
+	margin-left: 100px;
+
+}
+.bot-message{
+	background-color:white;
+	padding: 5px;
+	margin-right: 100px;
+	margin-bottom: 5px;
+}

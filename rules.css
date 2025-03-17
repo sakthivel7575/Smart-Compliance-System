@@ -1,0 +1,220 @@
+body{
+    background-color: #101010;
+	
+}
+.navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100; 
+	height: 60px;
+	width: 100%;
+	background-color: #141313;
+	color: #fff;
+	border-radius: 3px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-shadow: 5px 5px 20px rgb(111, 109, 109) ;
+}
+.navbar-nav {
+	display: flex;
+	flex-direction: row;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.nav-item {
+	margin: 0;
+}
+
+.nav-title {
+	padding-left: 40px;
+}
+
+.nav-link {
+	display: block;
+	padding: 15px;
+	color: white;
+	text-decoration: none;
+	font-weight: 600;
+	transition: background-color 0.3s ease;
+	padding-top: 20px;
+}
+
+.nav-link:hover {
+	color: #c86a6a;
+}
+.user-details-box {
+    position: fixed;
+    top: 60px; 
+    right: 10px; 
+    background: #0c0c0c;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    display: none;
+    z-index: 1000;
+    color: white;
+}
+
+#profile-link {
+    position: relative;
+}
+
+#profile-icon {
+    cursor: pointer;
+}
+.intro{
+	padding-top: 150px;
+	display: flex;
+    
+}
+.image{
+	padding: 20px;
+	padding-top: 50px;
+}
+.image img{
+	border-radius: 10%;
+	width: 800px;
+	box-shadow: 10px 10px 10px rgb(111, 109, 109);
+	border-style: solid;
+    border-color: #fff;
+	border-width: 5px;
+}
+.content{
+	width: 50%;
+	border-color: #630b0b;
+	border-style: dotted;
+	padding: 20px;
+	border-radius: 30px;
+	border-width: 5px;
+	box-shadow: 10px 10px 5px rgb(111, 109, 109) inset;
+}
+.para p{
+    color: rgba(252, 250, 250, 0.8);
+	font-size: 20px;
+	font-family:Arial, Helvetica, sans-serif;
+	text-align: justify;
+}
+.head{
+	text-align: center;
+	font-size: 25px;
+	color: white;
+	text-decoration: underline;
+}
+.navbar span{
+	color:red;
+}
+.head span{
+	color: red;
+}
+.main .container{
+	border-style: solid;
+	border-color: red;
+	height: auto;
+	border-radius: 50px;
+}
+.but{
+	text-align: center;
+}
+.but button{
+	height: 20px;
+	width: 60px;
+	background-color: rgb(187, 62, 62);
+	box-shadow: 1px 1px 20px 5px rgb(226, 135, 135);
+	border-radius: 5px;
+}
+.search{
+    padding-top: 55px;
+	padding-left: 500px;
+}
+.search form{
+    width: 380px;
+    max-width: 100%;
+    position: relative;
+}
+.search form input:first-child{
+    display: inline-block;
+    width: 100%;
+    padding: 14px 1px 14px 1px;
+    border: 2px solid brown;
+    outline: none;
+    border-radius: 30px;
+    text-align: center;
+}
+.search form button:last-child{
+    position: absolute;
+    display: inline-block;
+    outline: none;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 30px;
+    background-color: brown;
+    color: white;
+    box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
+    top: 6px;
+    right: 6px;
+	cursor: pointer;
+}
+.box{
+	padding: 40px;
+	display: flex;
+}
+.card {
+	box-shadow: 0 4px 8px 0 red ;
+	transition: 0.3s;
+	width: 40%;
+	color: white;
+	width: 400px;
+	height: 300px;
+  }
+  
+  .card:hover {
+	box-shadow: 0 8px 16px 0 rgba(199, 114, 114, 0.2);
+  }
+  
+  .containers {
+	padding: 10px;
+  }
+  .pad{
+	padding: 0px 30px;
+  }
+  .container h3{
+	color:#630b0b;
+	text-align: center;
+  }
+  .container h4{
+	text-align: center;
+	text-decoration: underline;
+  }
+  .containers p{
+	text-align: justify;
+  }
+.mybut{
+	text-align: center;
+}
+.mybut button{
+	background-color: #630b0b;
+	height: 40px;
+	border-radius: 30px;
+	color: white;
+}
+.hidden {
+	visibility: hidden;
+  }
+.image .buts {
+	padding: 20px;
+	text-align: right;
+	padding-bottom: 60px;
+}  
+.buts button{
+    height: 40px;
+	width: 200px;
+	font-size: 20px;
+	background-color: red;
+	color: white;
+	border-radius: 30px;
+}
+

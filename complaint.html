@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaint Form</title>
+    <link rel="stylesheet" href="complaint .css">
+</head>
+<body>
+    <nav class="navbar">
+        <h1 class="nav-title">PUBLIC <span>PREFERENCE</span></h1>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="#section1" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="#section2" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+                <a href="#section3" class="nav-link">Services</a>
+            </li>
+            <li class="nav-item" id="profile-link">
+                <a href="javascript:void(0);" class="nav-link" id="profile-icon">&#x1F464; Profile</a>
+            </li>
+        </ul>
+    </nav>
+    <div id="user-details" class="user-details-box">
+        <p id="user_name"></p>
+        <p id="email"></p>
+        <p id="contact"></p>
+    </div> 
+    <div class="comp">
+    <div class="box">
+        <div class="complaint">
+            <div class="head">
+                <h2>COMPLAINT <span>BOX</span></h2>
+            </div>
+           <div class="form"> 
+            <form method="post" action="complaint.php"  enctype="multipart/form-data"> 
+                <div class="form-group">
+                    <label>Crime Section</label><br>
+                    <select type="text" placeholder="crime Section" id="loc" class="form-control" name="section">
+                        <option value="crimnal">CRIMNAL</option>
+                        <option value="civil">CIVIL</option>
+                        <option value="cyber security">CYBER SECURITY</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Statement</label><br>
+                    <textarea  id="col" placeholder="write a statement here" class="form-control" name="statement"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Location</label><br>
+                    <input type="text" placeholder="Current Location" id="loc" class="form-control" name="location">
+                </div>
+                <div class="form-group">
+                    <label>Proof</label><br>
+                    <input type="file" class="form-control" name="file" accept ="image/jpg, image/jpeg, image/png, application/pdf, video/mp4">
+                </div>
+                <div class="form-group" id="bt">
+                    <input type="submit" value="Upload" id="btn" class="form-control">
+                </div>
+            </form></div>
+        </div>
+    </div>
+    <div class="box" >
+        <div class="admin" id="bt">
+         <a href="admin.php"><button >View complaint</button></a>
+        <div class="complaint" id="bot">
+            <div class="head">
+                <img src="./images/images (1).jpeg">
+                <h2>CAN I HELP<span> YOU!</span></h2>
+            </div>
+            <div class="chat-container">
+                <div class="chat-log" id="chatLog"></div>
+                <input type="text" id="userInput" placeholder="Type a message..." onkeypress="handleKeyPress(event)" enabled>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+   
+<script>
+const chatLog = document.getElementById("chatLog");
+const userInput = document.getElementById("userInput");
+
+function appendUserMessage(message) {
+    const userMessage = document.createElement("div");
+    userMessage.className = "user-message";
+    userMessage.innerText = message;
+    chatLog.appendChild(userMessage);
+   
+}
+
+function appendBotMessage(message) {
+    const botMessage = document.createElement("div");
+    botMessage.className = "bot-message";
+    botMessage.innerText = message;
+    chatLog.appendChild(botMessage);
+}
+
+function handleKeyPress(event) {
+    if (event.key === "Enter") {
+        const userMessage = userInput.value;
+        appendUserMessage(userMessage);
+        userInput.value = "";
+        getBotResponse(userMessage);
+    }
+}
+
+
+function getBotResponse(userMessage) {
+        const lowerCaseMessage = userMessage.toLowerCase();
+
+        if (lowerCaseMessage.includes("the police treated in a bad manner")) {
+            handleCrimeCategory();
+        } else if (lowerCaseMessage.includes("some people occupied government property")) {
+            handleCivilCategory();
+        } else if (lowerCaseMessage.includes("my mobile is hacked")|| ("mobile is hacked")) {
+            handleCybersecurityCategory();
+        } else {
+            appendBotMessage("I'm sorry, I couldn't understand your query. Please choose a valid category: crime, civil, or cybersecurity.");
+        }
+    }
+
+    function handleCrimeCategory() {
+        appendBotMessage("I see you have a crime-related complaint. So file a complaint in crime section and give proof and location to take necessary action.");
+    }
+
+    function handleCivilCategory() {
+        appendBotMessage("I see you have a civil-related complaint. So file a complaint in civil section and give proof and location to take necessary action.");
+    }
+
+    function handleCybersecurityCategory() {
+        
+        appendBotMessage("I see you have a cyber security-related complaint. So file a complaint in civil section and give proof and location to take necessary action.");
+    }
+
+
+    const profileLink = document.getElementById('profile-link');
+    const userDetails = document.getElementById('user-details');
+
+    profileLink.addEventListener('click', () => {
+        if (userDetails.style.display === 'none' || userDetails.style.display === '') {
+            userDetails.style.display = 'block';
+        } else {
+            userDetails.style.display = 'none';
+        }
+    });
+
+    window.addEventListener('load', () => {
+        const userName = getCookie("user_name");
+        let email = getCookie("email");
+        email = email.replace('%40', '@');
+        const contactNo = getCookie("contact_no");
+        document.getElementById("user_name").innerHTML = userName;
+        document.getElementById("email").innerHTML = email;
+        document.getElementById("contact").innerHTML = contactNo;
+    });
+
+    function getCookie(name) {
+        const cookies = document.cookie.split('; ');
+        for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i].split('=');
+            if (cookie[0] === name) {
+                return cookie[1];
+            }
+        }
+        return null;
+    }
+</script>
+</body>
+</html>

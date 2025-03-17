@@ -1,0 +1,120 @@
+body{
+    background-color: #3a3636;
+}
+.navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100; /* Increase the z-index to bring the navbar to the front */
+	height: 60px;
+	width: 100%;
+	background-color: #141313;
+	color: #fff;
+	border-radius: 3px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-shadow: 5px 5px 20px rgb(111, 109, 109) ;
+}
+.navbar-nav {
+	display: flex;
+	flex-direction: row;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.nav-item {
+	margin: 0;
+}
+
+.nav-title {
+	padding-left: 40px;
+}
+
+.nav-link {
+	display: block;
+	padding: 15px;
+	color: white;
+	text-decoration: none;
+	font-weight: 600;
+	transition: background-color 0.3s ease;
+	padding-top: 20px;
+}
+
+.nav-link:hover {
+	color: #c86a6a;
+}
+.user-details-box {
+    position: fixed;
+    top: 60px;
+    right: 10px; 
+    background: #0c0c0c;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    display: none;
+    z-index: 1000;
+    color: white;
+}
+
+#profile-link {
+    position: relative;
+}
+
+#profile-icon {
+    cursor: pointer;
+}
+.btn{
+    background-color: brown;
+    color: aliceblue;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 30px;
+    border-style: outset;
+    transition: transform 0.4s;
+}
+.btn:hover{
+    transform: scale(1.2);
+}
+.content{
+    position: absolute;
+    top: 50%;
+    left:8%;
+    transform: translateY(-50%);
+}
+.panel-heading h1{
+    padding-top: 50px;
+    color: white;
+    margin: 20px 0px 20px;
+    font-size: 75px;
+    text-align: center;
+}
+hr{
+    width: 30%;
+    margin-left: 35%;
+}
+.container1{
+    width: 21%;
+    max-height: 400px;
+    text-align: center;
+    padding: 20px;
+    display: inline-block;
+    position: relative;
+    margin-left: 50px;
+    border: 1px solid white;
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+
+.container1 img, .container1 video
+{
+    width: 93%;
+    height: 180px;
+    object-fit: cover;
+}
+span{
+    color: red;
+}
